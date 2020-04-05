@@ -7,6 +7,62 @@ const employees = [
       role: "Software Engineer"
   
     },
+        {
+      firstName: 'Samuel',
+      lastName: "Harris",
+      age: 42,
+      email: "samharris@apu.edu",
+      role: "Lawyer"
+  
+    },
+    {
+      firstName: 'Elena',
+      lastName: "Cashmore",
+      age: 21,
+      email: "elenac@blu.edu",
+      role: "CEO"
+  
+    },
+    {
+      firstName: 'Margaret',
+      lastName: "Madewell",
+      age: 35,
+      email: "margemade@tmc.edu",
+      role: "Software Engineer"
+  
+    },
+    {
+      firstName: 'Bobbi',
+      lastName: "Jackson",
+      age: 39,
+      email: "bobj@weq.edu",
+      role: "Accountant"
+  
+    },
+    {
+      firstName: 'Arnold',
+      lastName: "Messiah",
+      age: 22,
+      email: "arnoldmessi@bac.edu",
+      role: "Software Engineer"
+  
+    },
+    {
+      firstName: 'Ernest',
+      lastName: "Whitmore",
+      age: 55,
+      email: "ernestmore@jbp.edu",
+      role: "Software Engineer"
+  
+    },
+    {
+      firstName: 'Rick',
+      lastName: "Thaddeus",
+      age: 31,
+      email: "rickthad@asu.edu",
+      role: "UI/UX Designer"
+  
+    },
     {
       firstName: 'John',
       lastName: "Williams",
