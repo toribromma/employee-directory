@@ -20,7 +20,7 @@ function SearchForm() {
   };
 
   return (
-    <form className="search">
+    <form className="search ml-5 mt-2">
       <div className="form-group">
         <input
           value={search}
@@ -28,7 +28,7 @@ function SearchForm() {
           name="term"
           list="term"
           type="text"
-          className="form-control"
+          className="form-control-lg"
           placeholder="Search by Name"
           id="term"
         />

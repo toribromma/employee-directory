@@ -4,12 +4,12 @@ import {EmployeeContext} from "../../utils/employeeContext"
 
 function Table() {
 
-    const { displayedEmployees, setDisplayedEmployees, employees } = useContext(EmployeeContext)
+    const { displayedEmployees, setDisplayedEmployees } = useContext(EmployeeContext)
     
 
 
         function sortByName(){
-            employees.sort(function(a,b){
+            displayedEmployees.sort(function(a,b){
             if(a.firstName < b.firstName){
                 return -1;
             } else {
@@ -17,24 +17,25 @@ function Table() {
             }
         })
            // You have to spread, because this creates a new variable, instead of just updating the variable. React will not recognize it as an update if you just update the variable.
-        setDisplayedEmployees([...employees])
+        setDisplayedEmployees([...displayedEmployees])
     }
 
         function sortByAge(){
-            employees.sort(function(a,b){
+            displayedEmployees.sort(function(a,b){
                 return (a.age - b.age)
             })
-            setDisplayedEmployees([...employees])
+            setDisplayedEmployees([...displayedEmployees])
     }
 
 
     return (
-        <table className="table table-dark">
-            <thead>
+        <div className="table-responsive">
+        <table className="table table-striped table-bordered table-hover">
+            <thead className="thead-dark">
                 <tr>
-                    <th onClick={() => sortByName() } scope="col"><button>First Name</button></th>
+                    <th onClick={() => sortByName() } scope="col"><button type="button" className="btn btn-outline-light">First Name</button></th>
                     <th scope="col">Last Name</th>
-                    <th onClick={() => sortByAge() } scope="col"><button>Age</button></th>
+                    <th onClick={() => sortByAge() } scope="col"><button type="button" className="btn btn-outline-light">Age</button></th>
                     <th scope="col">Email</th>
                     <th scope="col">Role</th>
                 </tr>
@@ -53,6 +54,7 @@ function Table() {
                 })}
             </tbody>
         </table>
+        </div>
     )
 }
 export default Table;
